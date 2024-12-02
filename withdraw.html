@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Transfer Netlify</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 19px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .request-withdraw {
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .input-bar {
+            width: 300px;
+            height: 40px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .submit-btn {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .submit-btn:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Easy Transfer Netlify</h1>
+    </div>
+    <div class="request-withdraw">
+        <h2>Request Withdraw</h2>
+        <input type="text" id="user-number" class="input-bar" placeholder="User Number">
+        <input type="number" id="amount" class="input-bar" placeholder="Amount">
+        <button class="submit-btn" onclick="validateForm()">Submit</button>
+    </div>
+    <script>
+        function validateForm() {
+            var userNumber = document.getElementById("user-number").value;
+            var amount = document.getElementById("amount").value;
+            
+            if (userNumber.length < 6) {
+                alert("User Number must be at least 6 digits");
+                return;
+            }
+            
+            if (!userNumber.includes("2") || !userNumber.includes("5") || !userNumber.includes("3")) {
+                alert("Invalid! User Number");
+                return;
+            }
+            
+            if (amount <= 0) {
+                alert("Amount must be greater than 0");
+                return;
+            }
+            
+            window.location.href = "save.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .transactions-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .transactions-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .transactions-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .transaction {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .transaction:last-child {
+            border-bottom: none;
+        }
+        
+        .send-money-btn {
+            background-color: #FFA07A;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .send-money-btn:hover {
+            background-color: #FF8C69;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="transactions-container">
+        <div class="transactions-header">
+            <h1>Transactions</h1>
+            <button class="send-money-btn" onclick="location.href='1.html'"><i class="fas fa-paper-plane"></i> Send Money</button>
+        </div>
+        
+        <ul class="transactions-list">
+            <!-- Transactions will be listed here -->
+            <li>No transactions yet.</li>
+        </ul>
+    </div>
+    
+    <script>
+        // Fetch transactions from API or database and display them
+        // For demonstration purposes, we'll use dummy data
+        const transactions = [
+            
+        
+        const transactionsList = document.querySelector('.transactions-list');
+        
+        transactions.forEach((transaction) => {
+            const transactionHTML = `
+                <li class="transaction">
+                    <span>${transaction.date}</span>
+                    <span>${transaction.recipient}</span>
+                    <span>${transaction.amount}</span>
+                </li>
+            `;
+            transactionsList.insertAdjacentHTML('beforeend', transactionHTML);
+        });
+    </script>
+</body>
+</html>

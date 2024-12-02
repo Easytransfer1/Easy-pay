@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+      rel="stylesheet"
+      href="tps://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <title>Easy Transfer</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            user-select:none;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: orange;
+            color: #fff;
+            padding: 19px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .header li {
+            margin-right: 20px;
+        }
+
+        .header a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .header a:hover {
+            color: #ccc;
+        }
+
+        /* No Transactions Styles */
+        .no-transactions {
+            background-color: #fff;
+            padding: 60px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .no-transactions p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .cta-btn {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #444;
+        }
+
+        /* Header Icons Styles */
+        .header-icons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .header-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-icon img {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* Countries Styles */
+        .countries {
+            margin-top: 20px;
+        }
+
+        .country {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .country-name {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .country-percentage {
+            font-size: 16px;
+            color: green;
+        }
+    .country-percentage1 {
+            font-size: 16px;
+            color: red;
+        }
+    .icon-blocks {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.icon-row {
+display: flex;
+justify-content: space-around;
+width: 100%;
+margin-bottom: 20px;
+}
+
+.icon-block {
+width: 120px;
+height: 120px;
+background-color: white;
+border: 1px solid #ddd;
+border-radius: 10px;
+box-shadow:1 0 20 10px rgba(1, 10, 10, 10.12);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+}
+
+.icon-block i {
+font-size: 30px;
+margin-bottom: 10px;
+color: blue;
+}
+
+.icon-block p {
+font-size: 16px;
+text-align: center;
+color: orange;
+}
+
+.header ul li ion-icon {
+color:  #444;
+font-size: 30px;
+}
+    </style>
+</head>
+<body>
+    
+<div class="header">
+  <ul>
+    <li><a href="1.html"><ion-icon name="send-outline"></ion-icon></a></li>
+    <li><a href="re.html"><ion-icon name="arrow-down-outline"></ion-icon></a></li>
+    <li><a href="tran.html"><ion-icon name="pie-chart-outline"></ion-icon></a></li>
+  </ul>
+</div>
+
+
+    
+    <div class="no-transactions">
+        <p>No transactions yet!</p>
+        <button class="cta-btn" onclick="window.location.href='1.html'">Send Money Now!</button>
+    </div>
+    <div class="countries">
+        <h2>Countries We Support</h2>
+        <div class="country">
+            <span class="country-name">United States</span>
+            <span class="country-percentage">+23.7%</span>
+        </div>
+        <div class="country">
+            <span class="country-name">Canada</span>
+            <span class="country-percentage">+17.4%</span>
+        </div>
+        <div class="country">
+            <span class="country-name">United Kingdom</span>
+            <span class="country-percentage">+15.6%</span>
+        </div>
+        <div class="country">
+            <span class="country-name">Australia</span>
+            <span class="country-percentage">+12.3%</span>
+        </div>
+        <div class="country">
+            <span class="country-name">Germany</span>
+            <span class="country-percentage">+10.9%</span>
+        </div>
+        <div class="country">
+            <span class="country-name">France</span>
+            <span class="country-percentage">+9.5%</span>
+        </div>
+               <div class="country">
+            <span class="country-name">Island</span>
+            <span class="country-percentage">+9.3%</span>
+        </div>
+               <div class="country">
+            <span class="country-name">Africa</span>
+            <span class="country-percentage">+9.5%</span>
+        </div>
+               <div class="country">
+            <span class="country-name">Norway</span>
+            <span class="country-percentage">+9.5%</span>
+        </div>
+               <div class="country">
+            <span class="country-name">austrail</span>
+            <span class="country-percentage">+9.5%</span>
+        </div>
+               <div class="country">
+            <span class="country-name">South Africa</span>
+            <span class="country-percentage">+9.5%</span>
+        </div>
+        <div class="country">
+            <span class="country-name">Japan</span>
+            <span class="country-percentage">+8.2%</span>
+        </div>
+        <div class="country">
+            <span class="country-name">China</span>
+            <span class="country-percentage1">+7.1%</span>
+        </div>
+        <div class="country">
+            <span class="country-name">India</span>
+            <span class="country-percentage"1>+6.3%</span>
+        </div>
+        <div class="country">
+            <span class="country-name">Italy</span>
+            <span class="country-percentage">+5.9%</span>
+        </div>
+        <div class="country">
+            <span class="country-name">Spain</span>
+            <span class="country-percentage">+5.4%</span>
+        </div>
+        <div class="country">
+            <span class="country-name">Sweden</span>
+            <span class="country-percentage">+4.9%</span>
+        </div>
+        <div class="country">
+            <span class="country-name">Switzerland</span>
+            <span class="country-percentage1">+4.5%</span>
+        </div>
+        <div class="country">
+            <span class="country-name">Netherlands</span>
+            <span class="country-percentage">+4.2%</span>
+        </div>
+        <div class="country">
+            <span class="country-name">Belgium</span>
+            <span class="country-percentage">+3.9%</span>
+        </div>
+        <div class="country">
+            <span class="country-name">Austria</span>
+            <span class="country-percentage">+3.6%</span>
+        </div>
+        <div class="country">
+            <span class="country-name">Ireland</span>
+            <span class="country-percentage1">+3.3%</span>
+        </div>
+        <div class="country">
+            <span class="country-name">Denmark</span>
+            <span class="country-percentage">+3.1%</span>
+        </div>
+    </div>
+    
+
+
+
+
+<div class="icon-blocks">
+<div class="icon-row">
+<div class="icon-block" onclick="window.location.href='withdraw.html'">
+<i class="fas fa-minus-circle"></i>
+<p> Request Withdraw</p>
+</div>
+<div class="icon-block" onclick="window.location.href='1.html'">
+<i class="fas fa-paper-plane"></i>
+<p>Send</p>
+</div>
+</div>
+<div class="icon-row">
+<div class="icon-block" onclick="window.location.href='re.html'">
+<i class="fas fa-download"></i>
+<p>Receive</p>
+</div>
+<div class="icon-block" onclick="window.location.href='not.html'">
+<i class="fas fa-headset"></i>
+<p>Customer Service</p>
+</div>
+</div>
+<div class="icon-row">
+<div class="icon-block" onclick="window.location.href='tran.html'">
+<i class="fas fa-history"></i>
+<p>Transaction History</p>
+</div>
+<div class="icon-block" onclick="window.location.href='account.html'">
+<i class="fas fa-cog"></i>
+<p>Settings</p>
+</div>
+</div>
+<div class="icon-row">
+<div class="icon-block" onclick="window.location.href='not.html'">
+<i class="fas fa-question-circle"></i>
+<p>Help</p>
+</div>
+<div class="icon-block">
+<i class="fas fa-plus-circle"></i>
+<p>Request Refund</p>
+</div>
+</div>
+</div>
+
+
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+</body>
+</html>

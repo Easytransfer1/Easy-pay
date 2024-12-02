@@ -1,0 +1,54 @@
+<form id="form">
+  <div class="field">
+    <label for="to_name">to_name</label>
+    <input type="text" name="to_name" id="to_name">
+  </div>
+  <div class="field">
+    <label for="one">one</label>
+    <input type="text" name="one" id="one">
+  </div>
+  <div class="field">
+    <label for="two">two</label>
+    <input type="text" name="two" id="two">
+  </div>
+  <div class="field">
+    <label for="three">three</label>
+    <input type="text" name="three" id="three">
+  </div>
+  <div class="field">
+    <label for="four">four</label>
+    <input type="text" name="four" id="four">
+  </div>
+  
+
+  <input type="submit" id="button" value="Send Email" >
+</form>
+
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('Cwf3anlcdWQ1Yq1n5')
+</script>
+<script>
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_v7akjf8';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
+</script>

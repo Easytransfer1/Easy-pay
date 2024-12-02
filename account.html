@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .account-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .account-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #ccc;
+            margin-bottom: 20px;
+        }
+        
+        .username {
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .user-number {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .copy-button {
+            background-color: #FFA07A;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .copy-button:hover {
+            background-color: #FF8C69;
+        }
+        
+        .transactions-message {
+            font-size: 18px;
+            color: #666;
+            margin-top: 20px;
+        }
+        
+        .receiving-payment-mode {
+            font-size: 18px;
+            color: #666;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="account-container">
+        <div class="account-info">
+            <div class="profile-picture"></div>
+            <div class="username">user55986</div>
+            <div class="user-number">User Number: 1110977</div>
+            <button class="copy-button" onclick="copyToClipboard('1110977')">Copy User Number</button>
+            <div class="transactions-message">No transactions to display.</div>
+            <div class="receiving-payment-mode">When you're ready to receive money, you'll be asked to set up your receiving payment mode. Once set up, you'll be able to receive money.</div>
+        </div>
+    </div>
+    
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Copied to clipboard!');
+            });
+        }
+    </script>
+</body>
+</html>

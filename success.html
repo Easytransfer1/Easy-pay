@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transaction Pending</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #f5f5f5;
+}
+
+    .pending-container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .pending-message {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    
+    .timer {
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    
+    .note {
+        font-size: 18px;
+        color: #666;
+    }
+</style>
+
+</head>
+
+<body>
+<div class="pending-container">
+<h1>Transaction Pending</h1>
+<p class="pending-message">Your transaction is being processed.</p>
+<p class="timer" id="timer">2:00:00</p>
+<p class="note">Please note that this transaction will be confirmed within few munites</p>
+</div>
+
+<script>
+    // Set timer
+    var countdown = 1199; // 24 hours in seconds
+    var timer = document.getElementById('timer');
+    var interval = setInterval(function() {
+        countdown--;
+        var hours = Math.floor(countdown / 3600);
+        var minutes = Math.floor((countdown % 3600) / 60);
+        var seconds = countdown % 60;
+        timer.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        if (countdown === 0) {
+            clearInterval(interval);
+            // Redirect to success page after 24 hours
+            window.location.href = 'home.html';
+        }
+    }, 1000);
+</script>
+</body>
+</html>
